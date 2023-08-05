@@ -1,6 +1,6 @@
 {
-    "name": "hexo-folder",
-    "version": "1.0.0",
+    "name": "hexo-fold",
+    "version": "1.0.4",
     "description": "A plugin used to fold content block, modified from hexo-sliding-spoiler.",
     "main": "index.js",
     "scripts": {
@@ -8,18 +8,18 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/aimtao/hexo-folder.git"
+      "url": "git+https://github.com/aimtao/hexo-fold.git"
     },
     "keywords": [
       "hexo",
-      "spoiler"
+      "fold"
     ],
     "author": "aimtao",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/aimtao/hexo-folder/issues"
+      "url": "https://github.com/aimtao/hexo-fold/issues"
     },
-    "homepage": "https://github.com/aimtao/hexo-folder",
+    "homepage": "https://github.com/aimtao/hexo-fold",
     "dependencies": {
       "hexo-fs": "^2.0.0"
     }
