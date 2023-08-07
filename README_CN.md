@@ -2,6 +2,9 @@
 
 [English](https://github.com/AimTao/hexo-fold/blob/master/README_CN.md) | 中文
 
+> 原作的标签和 hexo-spoiler 插件冲突，给原作提了 pr，但是考虑到还有部分用户在用，更改标签名称无法向后兼容，会引起诸多麻烦。
+> 这里参考 hexo-sliding-spoiler，更改了 tag，修复了几个 bug，修改了样式，增加支持用户自定义颜色的功能，使用愉快~
+
 + [x] 简单、高效、美观
 + [x] 支持文本、图片、代码块等
 + [x] 自适应，容量超大
