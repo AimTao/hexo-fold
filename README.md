@@ -1,5 +1,7 @@
 A plugin used to fold content block, modified from [hexo-sliding-spoiler](https://github.com/fletchto99/hexo-sliding-spoiler).
 
+English | [中文](https://github.com/AimTao/hexo-fold/blob/master/README_CN.md)
+
 + [x] Simple, efficient and beautiful
 + [x] Support text, images, code blocks, and more
 + [x] Adaptive, ultra-large capacity
