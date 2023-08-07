@@ -3,6 +3,7 @@ A plugin used to fold content block, modified from [hexo-sliding-spoiler](https:
 + [x] Simple, efficient and beautiful
 + [x] Support text, images, code blocks, and more
 + [x] Adaptive, ultra-large capacity
++ [x] User-defined color
 
 ## Demo
 
@@ -18,7 +19,17 @@ If hexo can't detect this plugin automatically, you need to modify the `plugins`
 
 ```yaml
 plugins:
- - hexo-fold
+  - hexo-fold
+```
+
+If you want to customize the color, please add the following configuration.
+This is optional, if not configured a default color will be used.
+
+```yaml
+fold:
+  bg_color: "#f8b806"
+  board_color: "#e5efe7"
+  text_color: "#353535"
 ```
 
 ## Syntax
@@ -49,6 +60,3 @@ content
 content
 {% endfold %}
 ```
-
-## TODO
-+ [ ] User-defined color
