@@ -1,6 +1,6 @@
 {
     "name": "hexo-fold",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A plugin used to fold content block, modified from hexo-sliding-spoiler.",
     "main": "index.js",
     "scripts": {

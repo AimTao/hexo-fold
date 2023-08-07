@@ -2,17 +2,16 @@ const fs = require('hexo-fs');
 const path = require('path');
 
 hexo.extend.tag.register('fold', (args, content) =>
-`<div class='fold collapsed'>
+    `<div class='fold collapsed'>
     <div class='fold-title'>
         ${args.join(" ")}
     </div>
     <div class='fold-content'>
-        ${
-            hexo.render.renderSync({
-                text: content,
-                engine: "markdown"
-            }) || "No content to show"
-        }
+        ${hexo.render.renderSync({
+        text: content,
+        engine: "markdown"
+    }) || "No content to show"
+    }
     </div>
 </div>`, {
     ends: true
@@ -26,67 +25,67 @@ hexo.extend.generator.register('fold_asset', () => [
             const board_color = (hexo.config.fold && hexo.config.fold.board_color) || (hexo.theme.config.fold && hexo.theme.config.fold.board_color) || '#e5efe7a1';
             const text_color = (hexo.config.fold && hexo.config.fold.text_color) || (hexo.theme.config.fold && hexo.theme.config.fold.text_color) || '#353535';
             const cssContent = `
-                    .fold {
-                        margin: 5px 0;
-                        padding: 0 15px;
-                        border: 0.5px solid ${board_color};
-                        position: relative;
-                        clear: both;
-                        border-radius: 4px;
-                    }
-                    
-                    .fold .fold-title {
-                        background: ${bg_color};
-                        margin: 0 -15px;
-                        padding: 5px 15px;
-                        color: ${text_color};
-                        font-weight: bold;
-                        font-size: 14px;
-                        display: block;
-                        cursor: pointer;
-                        border-radius: 3px;
-                    }
+                .fold {
+                    margin: 5px 0;
+                    padding: 0 15px;
+                    border: 0.5px solid ${board_color};
+                    position: relative;
+                    clear: both;
+                    border-radius: 4px;
+                }
+                
+                .fold .fold-title {
+                    background: ${bg_color};
+                    margin: 0 -15px;
+                    padding: 5px 15px;
+                    color: ${text_color};
+                    font-weight: bold;
+                    font-size: 14px;
+                    display: block;
+                    cursor: pointer;
+                    border-radius: 3px;
+                }
 
-                    .fold .fold-title:before {
-                        font-weight: bold;
-                    }
-                    
-                    .fold.collapsed .fold-title:before {
-                        content: "▶ ";
-                    }
-                    
-                    .fold.expanded .fold-title:before {
-                        content: "▼ ";
-                    }
-                    
-                    .fold .fold-content {
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        -moz-transition-duration: 0.8s;
-                        -webkit-transition-duration: 0.8s;
-                        -o-transition-duration: 0.8s;
-                        transition-duration: 0.8s;
-                        -moz-transition-timing-function: ease-in-out;
-                        -webkit-transition-timing-function: ease-in-out;
-                        -o-transition-timing-function: ease-in-out;
-                        transition-timing-function: ease-in-out;
-                    }
-                    
-                    .fold.collapsed .fold-content {
-                        overflow: hidden;
-                        max-height: 0;
-                    }
-                    
-                    .fold.expanded .fold-content {
-                        max-height: 3000px;
-                        overflow: auto;
-                    }
-                    
-                    .fold .fold-content p:first-child {
-                        margin-top: 0 !important;
-                    }
+                .fold .fold-title:before {
+                    font-weight: bold;
+                }
+                
+                .fold.collapsed .fold-title:before {
+                    content: "▶ ";
+                }
+                
+                .fold.expanded .fold-title:before {
+                    content: "▼ ";
+                }
+                
+                .fold .fold-content {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    -moz-transition-duration: 0.8s;
+                    -webkit-transition-duration: 0.8s;
+                    -o-transition-duration: 0.8s;
+                    transition-duration: 0.8s;
+                    -moz-transition-timing-function: ease-in-out;
+                    -webkit-transition-timing-function: ease-in-out;
+                    -o-transition-timing-function: ease-in-out;
+                    transition-timing-function: ease-in-out;
+                }
+                
+                .fold.collapsed .fold-content {
+                    overflow: hidden;
+                    max-height: 0;
+                }
+                
+                .fold.expanded .fold-content {
+                    max-height: 3000px;
+                    overflow: auto;
+                }
+                
+                .fold .fold-content p:first-child {
+                    margin-top: 0 !important;
+                }
             `;
             return cssContent;
         }
