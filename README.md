@@ -29,8 +29,8 @@ This is optional, if not configured a default color will be used.
 
 ```yaml
 fold:
-  bg_color: "#f8b806"
-  board_color: "#e5efe7"
+  bg_color: "#e5efe7"
+  board_color: "#e5efe7a1"
   text_color: "#353535"
 ```
 
